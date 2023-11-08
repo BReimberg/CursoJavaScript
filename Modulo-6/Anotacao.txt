@@ -1,0 +1,271 @@
+================================================
+             VARIÁVEIS COMPOSTAS
+================================================
+
+--> Variáveis simples: só conseguem armazenar
+um valor por vez.
+
+--> Variáveis compostas: devem ser capazes de 
+armazenar vários valores em uma mesma estrutura.
+
+array vetor
+
+let num = [ 5, 8, 4]
+            0  1  2 --> Índice chave
+num[3] = 6 --> JS cria  um elemento com índice 3 e o valor 6
+
+num.push(7) --> metodo interno que irá acrescenta valores a um array
+
+num.length --> atributo p/ saber o comprimento do vetor
+
+num.sort() --> método interno para colocar os elementos em ordem crescente
+
+let num = [5, 8, 2, 9, 3]
+
+console.log(`Nosso vetor é o ${num}`)
+Retorno: Nosso vetor é o 5,8,2,9,3.
+
+console.log(`O vetor tem ${num.length} posições.`)
+Retorno: O vetor tem 5 posições.
+
+console.log(`O primeiro valor do vetor é ${num[0]}`)
+Retorno: 5
+
+PERCURSO DE EXIBIÇÃO
+
+enquanto pos for menor que o tamanho de num escreva os valores
+for( let pos=0; pos < num.length; pos++ ) {
+    console.log(num[pos])
+}
+Retorno: 
+            5
+            8
+            2
+            9
+            3
+
+Arrays e objetos*
+
+Para cada posição dentro em num mostre o console.log(num[pos])
+for(let pos in num) {
+    console.log(num[pos])
+}
+
+Buscar valores dentro de um vetor
+num.indexOf()
+
+let num = [5, 8, 2, 9, 3]
+let pos = num.indexOf(8)
+console.log(`o valor 8 está na posição ${pos}`)
+Retorno: o valor 8 está na posição 1
+
+let num = [5, 8, 2, 9, 3]
+num.sort() --> organiza os valores em ordem crescente
+console.log(`o valor 8 está na posição ${pos}`)
+Retorno: o valor 8 está na posição 3
+
+let num = [5, 8, 2, 9, 3]
+let pos = num.indexOf(4)
+console.log(`o valor 4 está na posição ${pos}`)
+Retorno: o valor 4 está na posição -1 (pois não existe o valor 4)
+
+let pos = num.indexOf(4)
+if (pos == -1) {
+    console.log('O valor não foi encontrado!')
+} else {
+    console.log(`o valor 4 está na posição ${pos}`)
+}
+Retorno: O valor não foi encontrado!
+
+================================================
+                    FUNÇÕES
+================================================
+
+--> Ações executadas assim que são chamadas ou em decorrência
+de algum evento.
+
+--> Uma função pode receber parâmetros e retornar resultado.
+
+--------------------------------------------------------------
+FUNÇÃO precisa de:
+Chamada
+Conjunto de Parâmetros (nem todas as funções precisam)
+Ação
+Retorno (nem todas as funções precisam)
+
+Parâmetro (formal)<--
+                    |
+    function ação(parametro) {
+
+            return res     --> ação
+                    |
+                    ----> retorno
+    }
+
+    ação(5) --> CHAMADA (parâmetro real )
+
+--------------------------------------------------------------
+function parimp(n) {
+    if(n%2==0) {
+        return 'par'
+    } else {
+        return 'impar'
+    }
+}
+let res = parimp(11)
+console.log(`O valor digitado é ${res}.`)
+Resultado: O valor digitado é impar.
+
+function soma(n1, n2) {
+    return n1 + n2
+}
+console.log(soma(2, 5))
+Resultado: 7
+
+function soma(n1, n2) {
+    return n1 + n2
+}
+console.log(soma(2)) --> 2 + undefined
+Resultado: NaN
+
+function soma(n1=0, n2=0) {
+    return n1 + n2
+}
+console.log(soma(2))
+Resultado: 2
+
+let v = function(x) {
+    return x*2
+}
+console.log(v(5))
+Resultado: 10
+
+FATORIAL:
+5! = 5 X 4 X 3 X 2 X 1 = 120
+5! = 5 X 4!
+n! = n x (n - 1)!
+1! = 1
+
+function fatorial(n) {
+    let fat = 1
+    //c recebe valor de n, enquanto c for maior que 1, c diminui 1 do valor;
+    for(let c = n; c > 1; c--) {
+        fat *= c
+    }
+    return fat
+}
+console.log(fatorial(5))
+
+RECURSIVIDADE
+function fatorial(n) {
+    //se o número que eu recebi for igual a 1
+    if(n == 1) {
+        return 1
+    //se não...
+    } else {
+        return n * fatorial(n - 1)
+    }   
+}
+console.log(fatorial(5))
+Resultado: 120
+
+================================================
+                    OBJETOS
+================================================
+Array: o índice fica fixo;
+//let num = [ 5, 8, 4]
+
+let amigo = []
+console.log(typeof amigo)
+Resultado: object
+------------------------------------------------
+Objeto:
+let amigo = {nome:'José', sexo:'M', peso:85.4, engordar(p){}}
+engordar(p){} --> [function] --> pode guardar funcionalidades
+
+let amigo = {}
+console.log(typeof amigo)
+Resultado: object
+
+------------------------------------------------
+let amigo = {nome: 'José', 
+sexo: 'M', 
+peso: 85.4, 
+engordar(p) {
+
+}}
+console.log(amigo)
+Resultado: { nome: 'José', sexo: 'M', peso: 85.4, engordar: [Function: engordar] }
+
+------------------------------------------------
+let amigo = {nome: 'José', 
+sexo: 'M', 
+peso: 85.4, 
+engordar(p) {
+
+}}
+console.log(amigo.nome)
+Resultado: José
+
+------------------------------------------------
+let amigo = {nome: 'José', 
+sexo: 'M', 
+peso: 85.4, 
+engordar(p=0) {
+    console.log('Engordou')
+    this.peso += p
+}}
+console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
+Resultado: José pesa 85.4Kg
+
+------------------------------------------------
+let amigo = {nome: 'José', 
+sexo: 'M', 
+peso: 85.4, 
+engordar(p=0) {
+    console.log('Engordou')
+    this.peso += p
+}}
+
+amigo.engordar(2)
+console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
+Resultado: 
+Engordou
+José pesa 87.4Kg
+
+================================================
+                    REVISÃO
+================================================
+JS: linguagem multparadigma
+
+Fundamentos: o que é JS, como surgiu, 
+evolução da linguagem, paradgma de linguagem client/server, 
+evolução para com o node.js, conquista de servidores;
+
+Variáveis e dados: variáveis, tipos de dados, como colocar os 
+dados dentro de variáveis, como o JS trata os tipos primitivos,
+
+Operadores: aritméticos, lógicos, relacionais;
+
+Condições: if simples, if composto, if alinhado, swith
+
+Repetições: while, do while, for
+
+Arrays: variáveis compostas 
+
+Functions
+
+DOM: Document Object Model --> JS se comunicar com HTML e CSS
+================================================
+                    ESTUDAR:
+================================================
+--> function
+--> objetos
+--> modularização --> código em arquivos separados
+--> RegEx --> expressões regulares
+--> JASON
+--> AJAX
+--> NodeJs
+================================================
+
+

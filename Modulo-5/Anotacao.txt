@@ -1,0 +1,63 @@
+=================================================
+                REPETIÇÕES/LAÇO PART 1
+=================================================
+
+Estrutura de repetição com teste lógico no INÍCIO
+--------------------------------------------------
+--> while: enquanto;
+
+let c = 1
+while (c <= 6) {
+    console.log('Tudo Bem?')
+    c++
+}
+
+Enquanto tiver fatias para comer o comando while será executado, quando não hover mais fatias acaba a repetição;
+
+function comerPizza() {
+    while (temFatia()) {
+        comerFatia()
+    }
+}
+-------------------------------------------------
+Estrutura de repetição com teste lógico no FINAL
+
+do {
+
+} while (condição) {
+
+}
+
+let c = 1
+do {
+    console.log(`Passo ${c}`)
+    c++
+} while (c <= 6)
+
+=================================================
+                REPETIÇÃO/LAÇO PART 2
+=================================================
+
+Estrutura de repetição com VARIÁVEL DE CONTROLE: inicialização, teste lógico e incremento;
+
+for (inicio; teste; incr) {
+
+}
+
+let c = 1
+while (c <= 10) {
+    console.log()
+    c++
+}
+
+for (var c = 1; c <= 10; c++) {
+    console.log(`Número ${c}`)
+}
+
+console.log('Vai começar...')
+for( c = 1; c <= 5; c++) {
+    console.log(c)
+}
+console.log('Fim!')
+
+=================================================

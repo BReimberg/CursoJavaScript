@@ -1,0 +1,41 @@
+===================================
+        INTRODUÇÃO AO DOM
+===================================
+
+Árvore DOM:
+
+window: janela do navegador;
+--->location
+--->document ---> HTML ---> head (meta, title), body(h1, p, div...) --->
+--->history
+
+
+Metodos de Acesso:
+--> por Marca/Tag --> getElementByTagName();
+--> por ID --> getElementById();
+--> por Nome --> getElementsByName();
+--> por Classe --> getElementsByClassName();
+--> por Seletor/CSS --> querySelector(); querySelectorAll();
+
+===================================
+             EVENTOS DOM
+===================================
+
+<div>
+
+Eventos com o mouse: 
+mouseenter --> quando o cursor entra na área da div;
+mousemove --> quando o cursor se movimenta dentro da div;
+mousedown --> quando clicar e segurar o botão do mouse na div;
+mouseup --> quando solta o botão com o cursor dentro da div;
+click --> clicar e soltar o botão do mouse na div;
+mouseout --> quando o cursor sai da área da div;
+
+Funções: conjuntos de códigos/ linhas que vão ser executadas só quando o evento ocorrer;
+
+Bloco:
+
+function acao(opcionalmente colocar parâmetros){
+     
+}
+===================================

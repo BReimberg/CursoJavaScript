@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: rgb(42, 42, 141);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM: Document Object Model</h1>
+    <p>Aqui vai o resultado</p> <!-- Primeiro parágrafo [0] -->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p> <!-- Segundo parágrafo [1] -->
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = document.getElementsByTagName('p')[0];
+        var p2 = document.getElementsByTagName('p') [1];
+
+        /*var d = document.getElementById('msg'); 
+        //innerText: pega apenas o texto, sem a formatação;
+        //innerHTML: pega o texto e as tags/formatação;
+        document.write('No primeiro parágrafo está escrito assim: ' + p1.innerText  + '<br>No segundo parágrafo está escrito assim: ' + p2.innerText + '<br>') 
+        corpo.style.background = 'green'
+        p1.style.color = 'pink'
+        document.write(p2.innerHTML);
+        
+        d.style.background = 'red'
+        d.innerText = 'Estou aguardando...'
+
+        var d = document.getElementsByName('msg')[0];
+        d.innerText = 'Olá!';
+
+        var d = document.getElementsByClassName('msg')[0];
+        d.innerText = 'Olá!';
+        */
+        var d = document.querySelector('div#msg');
+    </script>
+</body>
+</html>

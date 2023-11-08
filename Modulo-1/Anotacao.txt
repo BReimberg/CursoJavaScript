@@ -1,0 +1,21 @@
+==================
+*INTRODUÇÃO JS*
+==================
+
+Teste no código da página inicial do Google:
+alert ('Olá, Mundo!)
+document.body.style.backgroud = 'black'
+
+*Framework*
+------------------
+jQuery = conjunto de bibliotecas; Facilita a interatividade;
+
+Angular = facilita a criação de aplicações web; Linguagem declarativa;
+
+React = semelhante ao Angular, porém mais flexivel;
+
+Vue.js
+
+Electrom = criação de interfaces gráficas; VS Code foi feito em Electrom;
+
+Ionic = SDK para criar aplicações p/ dispositivos móveis;

@@ -1,0 +1,63 @@
+===================================
+        CONDIÇÕES (PART-1)
+===================================
+
+Sequências:
+var n = 3
+n += 2
+window.alert(n)
+
+Desvio condicional
+
+if(condição) {
+    True
+} else {
+    False
+}
+------------------------------------
+*Tipos de Condições*
+------------------------------------
+
+Condição Simples: se a condição for falsa nada irá acontecer e o programa vai continuar;
+
+if (condição) {
+    True
+}
+
+
+Se a condição retornar True acontece x situação, se retornar False acontece z situação;
+if(condição) {
+    True
+} else {
+    False
+}
+
+
+Condição Aninhada: uma dentro do outra;
+
+if (condição1) {
+    bloco1
+} else {
+    if (condição2) {
+        bloco2
+    } else {
+        bloco3
+    }
+}
+
+Condição Multipla
+
+switch (expressão) {
+    case valor 1:
+ 
+    break (obrigatório)
+    case valor 2:
+
+    break (obrigatório)
+    case valor 3:
+
+    break (obrigatório)
+    default:
+
+    break (esse é opcional)
+}
